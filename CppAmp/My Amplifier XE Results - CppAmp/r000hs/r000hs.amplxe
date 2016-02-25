@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <rdmgr>
+  <timestamp type="u64_t">1430755794</timestamp>
+  <hostname>ARBOREA</hostname>
+  <os>windows</os>
+  <product>Intel® VTune™ Amplifier XE 2015 Update 2</product>
+  <buildNumber type="s32_t">393444</buildNumber>
+  <logicalCPUCount type="s32_t">8</logicalCPUCount>
+  <CPUFrequency type="s64_t">2500000000</CPUFrequency>
+  <collectionTimeEnd type="u64_t">1430755797</collectionTimeEnd>
+  <variables>
+   <at>hs</at>
+  </variables>
+ </rdmgr>
+</root>

@@ -1,0 +1,92 @@
+#include "stdafx.h"
+
+int reduce(int argc, char *argv[])
+{
+  int size, rank;
+
+  MPI_Init(&argc, &argv);
+  MPI_Comm_size(MPI_COMM_WORLD, &size);
+  MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+
+  const int itemsPerProcess = 10;
+  const int count = size * itemsPerProcess;
+  int *data = new int[count];
+  
+  if (rank == 0)
+  {
+    for (size_t i = 0; i < count; i++)
+    {
+      data[i] = rand() % 10;
+    }
+  }
+
+  // every processor gets a chunk of the final data
+  int *localData = new int[10];
+  MPI_Scatter(data, itemsPerProcess, MPI_INT, localData, itemsPerProcess, MPI_INT, 0, MPI_COMM_WORLD);
+
+  for (size_t i = 0; i < itemsPerProcess; i++)
+  {
+    cout << rank << ":" << localData[i] << endl;
+  }
+
+  // compute local sum
+  int localSum = 0;
+  for (size_t i = 0; i < itemsPerProcess; i++)
+  {
+    localSum += localData[i];
+  }
+
+  cout << rank << " local sum = " << localSum << endl;
+
+  // not reduce into a global sum
+  int globalSum = 0;
+  MPI_Reduce(&localSum, &globalSum, 1, MPI_INT, MPI_SUM, 0, MPI_COMM_WORLD);
+
+  if (rank == 0) {
+    cout << "Total sum = " << globalSum << endl;
+    delete[] data;
+  }
+
+
+  MPI_Finalize();
+
+  return 0;
+}
+
+int broadcast(int argc, char *argv[])
+{
+  int size, rank;
+
+  MPI_Init(&argc, &argv);
+
+  MPI_Comm_size(MPI_COMM_WORLD, &size);
+  MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+
+  if (rank == 0)
+  {
+    int value = 42;
+    cout << "Ready to broadcast " << value << endl;;
+    MPI_Bcast(&value, 1, MPI_INT, 0 /*root!*/, MPI_COMM_WORLD);
+  }
+  else
+  {
+    int value;
+    MPI_Bcast(&value, 1, MPI_INT, 0 /*root*/, MPI_COMM_WORLD);
+    cout << rank << " received from 0 the value " << value << endl;
+  }
+
+  MPI_Barrier(MPI_COMM_WORLD);
+  cout << "Rank " << rank << " is done working" << endl;
+
+  MPI_Finalize();
+
+  return 0;
+}
+
+int main(int argc, char *argv[])
+{
+  random_device rd{};
+  srand(rd());
+  //return broadcast(argc, argv);
+  return reduce(argc, argv);
+}

@@ -1,0 +1,47 @@
+Microsoft (R) Build Engine version 12.0.31101.0
+[Microsoft .NET Framework, version 4.0.30319.34014]
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Building the projects in this solution one at a time. To enable parallel build, please add the "/m" switch.
+Build started 25/11/2014 11:36:41.
+Project "C:\Dropbox\Courses\Pluralsight - HPC\HpcSamples\HpcSamples.sln" on node 1 (default targets).
+ValidateSolutionConfiguration:
+  Building solution configuration "Debug|X64".
+Project "C:\Dropbox\Courses\Pluralsight - HPC\HpcSamples\HpcSamples.sln" (1) is building "C:\Dropbox\Courses\Pluralsight - HPC\HpcSamples\SIMD\SIMD.vcxproj" (2) on node 1 (default targets).
+InitializeBuildStatus:
+  Touching "x64\Debug\SIMD.tlog\unsuccessfulbuild".
+MessageBuildingWithCompiler:
+  Building with Intel(R) C++ Compiler XE 15.0
+ClCompile:
+  ***** ClCompile (x64 - Intel C++)
+  C:\Program Files (x86)\Intel\Composer XE 2015\bin\Intel64\icl.exe /c /Qvc12 /Qlocation,link,"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64" /I"e:\Program Files (x86)\Visual Leak Detector\include" /Zi /nologo /W3 /Od /Qftz- /D __INTEL_COMPILER=1500 /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /EHa /RTC1 /MDd /GS /arch:SSE3 /Zc:wchar_t /Zc:forScope /Qstd=c++11 /Yc"stdafx.h" /Fp"x64\Debug\SIMD.pch" /FAs /Fa"x64\Debug\\" /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Qopt-report:5 /Qopt-report-format:vs /TP stdafx.cpp
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Platforms\x64\PlatformToolsets\Intel C++ Compiler XE 15.0\Toolset.targets(225,5): error MSB6003: The specified task executable "icl.exe" could not be run. The system cannot find the file specified. (Exception from HRESULT: 0x80070002) [C:\Dropbox\Courses\Pluralsight - HPC\HpcSamples\SIMD\SIMD.vcxproj]
+Done Building Project "C:\Dropbox\Courses\Pluralsight - HPC\HpcSamples\SIMD\SIMD.vcxproj" (default targets) -- FAILED.
+Project "C:\Dropbox\Courses\Pluralsight - HPC\HpcSamples\HpcSamples.sln" (1) is building "C:\Dropbox\Courses\Pluralsight - HPC\HpcSamples\HelloMPI\HelloMPI.vcxproj" (3) on node 1 (default targets).
+InitializeBuildStatus:
+  Touching "x64\Debug\HelloMPI.tlog\unsuccessfulbuild".
+MessageBuildingWithCompiler:
+  Building with Intel(R) C++ Compiler XE 15.0
+ClCompile:
+  ***** ClCompile (x64 - Intel C++)
+  C:\Program Files (x86)\Intel\Composer XE 2015\bin\Intel64\icl.exe /c /Qvc12 /Qlocation,link,"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64" /I"C:\Program Files (x86)\Intel\IMPI\intel64\bin\..\..\intel64\include" /Ic:\boost /Zi /nologo /W3 /Od /Qftz- /D __INTEL_COMPILER=1500 /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /EHsc /RTC1 /MDd /GS /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"x64\Debug\HelloMPI.pch" /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /TP stdafx.cpp
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Platforms\x64\PlatformToolsets\Intel C++ Compiler XE 15.0\Toolset.targets(225,5): error MSB6003: The specified task executable "icl.exe" could not be run. The system cannot find the file specified. (Exception from HRESULT: 0x80070002) [C:\Dropbox\Courses\Pluralsight - HPC\HpcSamples\HelloMPI\HelloMPI.vcxproj]
+Done Building Project "C:\Dropbox\Courses\Pluralsight - HPC\HpcSamples\HelloMPI\HelloMPI.vcxproj" (default targets) -- FAILED.
+Done Building Project "C:\Dropbox\Courses\Pluralsight - HPC\HpcSamples\HpcSamples.sln" (default targets) -- FAILED.
+
+Build FAILED.
+
+"C:\Dropbox\Courses\Pluralsight - HPC\HpcSamples\HpcSamples.sln" (default target) (1) ->
+"C:\Dropbox\Courses\Pluralsight - HPC\HpcSamples\SIMD\SIMD.vcxproj" (default target) (2) ->
+(ClCompile target) -> 
+  C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Platforms\x64\PlatformToolsets\Intel C++ Compiler XE 15.0\Toolset.targets(225,5): error MSB6003: The specified task executable "icl.exe" could not be run. The system cannot find the file specified. (Exception from HRESULT: 0x80070002) [C:\Dropbox\Courses\Pluralsight - HPC\HpcSamples\SIMD\SIMD.vcxproj]
+
+
+"C:\Dropbox\Courses\Pluralsight - HPC\HpcSamples\HpcSamples.sln" (default target) (1) ->
+"C:\Dropbox\Courses\Pluralsight - HPC\HpcSamples\HelloMPI\HelloMPI.vcxproj" (default target) (3) ->
+  C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Platforms\x64\PlatformToolsets\Intel C++ Compiler XE 15.0\Toolset.targets(225,5): error MSB6003: The specified task executable "icl.exe" could not be run. The system cannot find the file specified. (Exception from HRESULT: 0x80070002) [C:\Dropbox\Courses\Pluralsight - HPC\HpcSamples\HelloMPI\HelloMPI.vcxproj]
+
+    0 Warning(s)
+    2 Error(s)
+
+Time Elapsed 00:00:01.57

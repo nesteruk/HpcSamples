@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SIMD", "SIMD\SIMD.vcxproj", "{11AC731B-F733-47E0-96B9-EA7DDFEEAFAF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MPI", "MPI", "{79561D5F-5E17-454D-936E-A7F58C084E09}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloMPI", "HelloMPI\HelloMPI.vcxproj", "{AF45A5AA-C13F-48A0-B85C-6B5F359F7D64}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppAmp", "CppAmp\CppAmp.vcxproj", "{17B784C8-D799-4FFA-AAC2-6B8EF43ADE0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11AC731B-F733-47E0-96B9-EA7DDFEEAFAF}.Debug|x64.ActiveCfg = Debug|x64
+		{11AC731B-F733-47E0-96B9-EA7DDFEEAFAF}.Debug|x64.Build.0 = Debug|x64
+		{11AC731B-F733-47E0-96B9-EA7DDFEEAFAF}.Release|x64.ActiveCfg = Release|x64
+		{AF45A5AA-C13F-48A0-B85C-6B5F359F7D64}.Debug|x64.ActiveCfg = Debug|x64
+		{AF45A5AA-C13F-48A0-B85C-6B5F359F7D64}.Debug|x64.Build.0 = Debug|x64
+		{AF45A5AA-C13F-48A0-B85C-6B5F359F7D64}.Release|x64.ActiveCfg = Release|x64
+		{17B784C8-D799-4FFA-AAC2-6B8EF43ADE0A}.Debug|x64.ActiveCfg = Debug|x64
+		{17B784C8-D799-4FFA-AAC2-6B8EF43ADE0A}.Debug|x64.Build.0 = Debug|x64
+		{17B784C8-D799-4FFA-AAC2-6B8EF43ADE0A}.Release|x64.ActiveCfg = Release|x64
+		{17B784C8-D799-4FFA-AAC2-6B8EF43ADE0A}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AF45A5AA-C13F-48A0-B85C-6B5F359F7D64} = {79561D5F-5E17-454D-936E-A7F58C084E09}
+	EndGlobalSection
+EndGlobal
